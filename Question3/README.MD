@@ -11,11 +11,8 @@ function findFirstStringInBracket(str) {
                 wordsAfterFirstBracket = wordsAfterFirstBracket.substr(1);
                 let indexClosingBracketFound = wordsAfterFirstBracket.indexOf(")");
                 if (indexClosingBracketFound >= 0) {
-                    return wordsAfterFirstBracket.substring(0,
-                        indexClosingBracketFound);
-
-                }
-                else {
+                    return wordsAfterFirstBracket.substring(0, indexClosingBracketFound);
+                } else {
                     return '';
                 }
             } else {
@@ -29,3 +26,9 @@ function findFirstStringInBracket(str) {
     }
 }
 ```
+
+## Description
+There are 3 file in this folder:
+* `original.js`: contains original function
+* `answer1.js`: contains solution with split-function approach
+* `answer2.js`: contains solution with regex approach
