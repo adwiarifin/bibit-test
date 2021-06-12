@@ -21,15 +21,21 @@ const indexWord = (word) => {
 }
 
 const main = (arr) => {
-    const map = [];
+    const result = {};
     for (let i = 0; i < arr.length; i++) {
-        const element = arr[i];
-        const word = indexWord(element);
-        map[i] = word;
+        const word = arr[i];
+        const index = indexWord(word);
+        if (result[index]) {
+            result[index].push(word);
+        } else {
+            result[index] = [word]
+        }
     }
-    console.log(arr, map);
+    
+    const arrOfValues = Object.values(result);
+    return arrOfValues;
 };
 
 const input = ['kita', 'atik', 'tika', 'aku', 'kia', 'makan', 'kua'];
 const answer = main(input);
-// console.log(answer);
+console.log(answer);
