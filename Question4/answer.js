@@ -1,4 +1,4 @@
-const mapWord = (word) => {
+const indexWord = (word) => {
     // count occurence each character
     const x = {};
     for (let i = 0; i < word.length; i++) {
@@ -24,7 +24,7 @@ const main = (arr) => {
     const map = [];
     for (let i = 0; i < arr.length; i++) {
         const element = arr[i];
-        const word = mapWord(element);
+        const word = indexWord(element);
         map[i] = word;
     }
     console.log(arr, map);
