@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate:latest": "knex migrate:latest",
+    "migrate:rollback": "knex migrate:rollback --all",
+    "pretest": "cross-env NODE_ENV=test npm run migrate:rollback && cross-env NODE_ENV=test npm run migrate:latest",
+    "test": "cross-env NODE_ENV=test mocha --exit",
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
@@ -18,5 +21,12 @@
     "express-group-routes": "^1.1.0",
     "knex": "^0.95.6",
     "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "cross-env": "^7.0.3",
+    "mocha": "^9.0.0",
+    "nodemon": "^2.0.7",
+    "supertest": "^6.1.3"
   }
 }

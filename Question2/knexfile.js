@@ -12,4 +12,15 @@ module.exports = {
       database: process.env.DB_DATABASE,
     },
   },
+
+  test: {
+    client: 'mysql',
+    connection: {
+      host: process.env.DB_TEST_HOST,
+      user: process.env.DB_TEST_USER,
+      password: process.env.DB_TEST_PASSWORD,
+      database: process.env.DB_TEST_DATABASE,
+    },
+  },
+
 };
