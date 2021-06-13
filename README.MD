@@ -1,10 +1,10 @@
 # README
 
 ## Question 1
-[Simple Database Query](Question1/README.MD)
+[Simple Database Query](Question1)
 ## Question 2
-[ExpressJS](Question2/README.MD)
+[ExpressJS](Question2)
 ## Question 3
-[Refactor](Question3/README.MD)
+[Refactor](Question3)
 ## Question 4
-[Logic Test](Question1/README.MD)
+[Logic Test](Question4)
