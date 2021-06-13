@@ -1,4 +1,7 @@
+require('express-group-routes');
+
 const express = require('express');
+const routes = require('./routes');
 
 process.on('uncaughtException', (e) => {
     console.error(e);
@@ -10,10 +13,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-    res.json({
-        message: 'hello world'
-    })
-});
+routes(app);
 
 module.exports = app;
