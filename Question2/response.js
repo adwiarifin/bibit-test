@@ -1,4 +1,9 @@
 module.exports = {
+    BAD_REQUEST: {
+        status: 400,
+        type: 'BAD_REQUEST',
+        message: 'Invalid request'
+    },
     json(data, err, errMessage) {
         let response = {};
 
