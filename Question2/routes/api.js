@@ -1,5 +1,5 @@
+const routeMovie = require('../modules/movie/movie.route');
+
 module.exports = (app) => {
-    app.get('/', (req, res) => {
-        res.sendStatus(200);
-    })
+    routeMovie(app);
 }
